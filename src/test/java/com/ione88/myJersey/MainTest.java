@@ -1,5 +1,5 @@
 
-package com.gallup.gethip;
+package com.ione88.myJersey;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 

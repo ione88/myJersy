@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jersey_ormlite_example.iml" filepath="$PROJECT_DIR$/jersey_ormlite_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJersy.iml" filepath="$PROJECT_DIR$/MyJersy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJersy.iml" filepath="$PROJECT_DIR$/MyJersy.iml" />
     </modules>
   </component>
 </project>
