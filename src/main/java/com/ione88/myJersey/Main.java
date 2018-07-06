@@ -40,20 +40,18 @@ public class Main {
 
     protected static HttpServer startServer() throws IOException {
 
-        Injector injectorSQL = Guice.createInjector(new DataSourceModule());
-        DataSourceMySQL dataSourceMySQL = injectorSQL.getInstance(DataSourceMySQL.class);
-        DataSource dataSource = dataSourceMySQL.getDataSource();
+        DataSource dataSource = Guice.createInjector(new DataSourceModule())
+                .getInstance(DataSourceMySQL.class).getDataSource();
+        Injector injector = Guice.createInjector(new MyJerseyModule(dataSource));
 
         ResourceConfig resourceConfig = new PackagesResourceConfig("com.ione88.myJersey.resources");
-        Injector injector = Guice.createInjector(new MyJerseyModule(dataSource));
         IoCComponentProviderFactory ioc = new GuiceComponentProviderFactory(resourceConfig, injector);
         return GrizzlyServerFactory.createHttpServer(BASE_URI, resourceConfig, ioc);
     }
 
     public static void main(String[] args) throws IOException {
-        // Grizzly 2 initialization
         HttpServer httpServer = startServer();
-        System.out.println("Jersey app started with \nHit enter to stop it...");
+        System.out.println("Jersey app started  \nHit enter to stop it...");
 
         System.in.read();
         httpServer.stop();
