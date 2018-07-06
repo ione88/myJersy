@@ -5,7 +5,6 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.ione88.myJersey.db.DataSourceModule;
 import com.ione88.myJersey.db.DataSourceMySQL;
-import com.ione88.myJersey.resources.YandexNewsResource;
 import com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
@@ -45,21 +44,15 @@ public class Main {
         DataSourceMySQL dataSourceMySQL = injectorSQL.getInstance(DataSourceMySQL.class);
         DataSource dataSource = dataSourceMySQL.getDataSource();
 
-        System.out.println("Starting grizzly...");
-
-        Injector injector = Guice.createInjector(new MyJerseyModule(dataSource));
-        YandexNewsResource yandexNewsResource = injector.getInstance(YandexNewsResource.class);
-
         ResourceConfig resourceConfig = new PackagesResourceConfig("com.ione88.myJersey.resources");
+        Injector injector = Guice.createInjector(new MyJerseyModule(dataSource));
         IoCComponentProviderFactory ioc = new GuiceComponentProviderFactory(resourceConfig, injector);
-
         return GrizzlyServerFactory.createHttpServer(BASE_URI, resourceConfig, ioc);
     }
 
     public static void main(String[] args) throws IOException {
         // Grizzly 2 initialization
         HttpServer httpServer = startServer();
-
         System.out.println("Jersey app started with \nHit enter to stop it...");
 
         System.in.read();

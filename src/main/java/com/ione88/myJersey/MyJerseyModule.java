@@ -3,9 +3,9 @@ package com.ione88.myJersey;
 import com.google.inject.AbstractModule;
 import com.ione88.myJersey.service.DnsProductAvailableService;
 import com.ione88.myJersey.service.DnsProductService;
-import com.ione88.myJersey.service.Impl.DnsProductAvailableServiceImpl;
-import com.ione88.myJersey.service.Impl.DnsProductServiceImpl;
-import com.ione88.myJersey.service.Impl.YandexNewsServiceImpl;
+import com.ione88.myJersey.service.impl.DnsProductAvailableServiceImpl;
+import com.ione88.myJersey.service.impl.DnsProductServiceImpl;
+import com.ione88.myJersey.service.impl.YandexNewsServiceImpl;
 import com.ione88.myJersey.service.YandexNewsService;
 
 import javax.sql.DataSource;

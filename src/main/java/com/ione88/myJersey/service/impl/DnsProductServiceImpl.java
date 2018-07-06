@@ -1,4 +1,4 @@
-package com.ione88.myJersey.service.Impl;
+package com.ione88.myJersey.service.impl;
 
 import com.ione88.myJersey.model.DnsProduct;
 import com.ione88.myJersey.service.DnsProductService;
