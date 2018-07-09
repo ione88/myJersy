@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ru.vyarus:guice-validator:1.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.vyarus/guice-validator/1.2.0/bdd9a418168324a0bfecdab89ccda291fa2eb901/guice-validator-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.vyarus/guice-validator/1.2.0/5287297fe096921c41e01f0f47b063c455277a84/guice-validator-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

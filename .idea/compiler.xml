@@ -11,6 +11,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="MyJersy" target="1.6" />
+      <module name="MyJersy_main" target="1.6" />
+      <module name="MyJersy_test" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

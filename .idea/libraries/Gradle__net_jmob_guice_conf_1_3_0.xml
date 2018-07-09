@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.jmob:guice.conf:1.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jmob/guice.conf/1.3.0/7762b3c31984b1dd84f8877f1193e1cc8a4cf41a/guice.conf-1.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jmob/guice.conf/1.3.0/46a07d191c0314e4c42a9e53aa62e152dc5b9a71/guice.conf-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
