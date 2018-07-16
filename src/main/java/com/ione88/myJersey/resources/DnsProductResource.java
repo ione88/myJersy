@@ -2,8 +2,8 @@
 package com.ione88.myJersey.resources;
 
 import com.google.inject.Inject;
-import com.ione88.myJersey.model.DnsProduct;
-import com.ione88.myJersey.service.DnsProductService;
+import com.ione88.myJersey.models.DnsProduct;
+import com.ione88.myJersey.services.DnsProductService;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.PUT;

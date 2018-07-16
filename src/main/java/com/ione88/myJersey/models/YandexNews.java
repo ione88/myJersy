@@ -1,4 +1,4 @@
-package com.ione88.myJersey.model;
+package com.ione88.myJersey.models;
 
 import java.util.Date;
 
@@ -35,10 +35,6 @@ public class YandexNews {
     }
 
     public void setUpdated(Date updated) {
-        this.updated = updated;
-    }
-
-    public void setUpdate(Date update) {
         this.updated = updated;
     }
 

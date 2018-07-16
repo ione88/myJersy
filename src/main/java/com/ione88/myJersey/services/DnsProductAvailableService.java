@@ -1,7 +1,7 @@
-package com.ione88.myJersey.service;
+package com.ione88.myJersey.services;
 
 
-import com.ione88.myJersey.model.DnsProductAvailable;
+import com.ione88.myJersey.models.DnsProductAvailable;
 
 public interface DnsProductAvailableService {
     DnsProductAvailable createDnsProductAvailable(DnsProductAvailable dnsProductAvailable);

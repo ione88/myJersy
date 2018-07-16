@@ -1,4 +1,4 @@
-package com.ione88.myJersey.db;
+package com.ione88.myJersey.configs.dbUtils;
 
 import net.jmob.guice.conf.core.BindConfig;
 import net.jmob.guice.conf.core.InjectConfig;

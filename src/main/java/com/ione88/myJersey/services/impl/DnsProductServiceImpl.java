@@ -1,7 +1,7 @@
-package com.ione88.myJersey.service.impl;
+package com.ione88.myJersey.services.impl;
 
-import com.ione88.myJersey.model.DnsProduct;
-import com.ione88.myJersey.service.DnsProductService;
+import com.ione88.myJersey.models.DnsProduct;
+import com.ione88.myJersey.services.DnsProductService;
 import org.apache.commons.dbutils.QueryRunner;
 
 import javax.inject.Inject;

@@ -3,8 +3,10 @@ package com.ione88.myJersey;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.ione88.myJersey.db.DataSourceModule;
-import com.ione88.myJersey.db.DataSourceMySQL;
+import com.ione88.myJersey.configs.MyJerseyModule;
+import com.ione88.myJersey.configs.dbUtils.DataSourceModule;
+import com.ione88.myJersey.configs.dbUtils.DataSourceMySQL;
+import com.ione88.myJersey.filters.ResponseFilter;
 import com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
@@ -21,7 +23,6 @@ import java.net.URI;
 public class Main {
 
     private static int getPort(int defaultPort) {
-        //grab port from environment, otherwise fall back to default port 9998
         String httpPort = System.getProperty("jersey.test.port");
         if (null != httpPort) {
             try {
@@ -39,20 +40,20 @@ public class Main {
     public static final URI BASE_URI = getBaseURI();
 
     protected static HttpServer startServer() throws IOException {
-
         DataSource dataSource = Guice.createInjector(new DataSourceModule())
                 .getInstance(DataSourceMySQL.class).getDataSource();
         Injector injector = Guice.createInjector(new MyJerseyModule(dataSource));
 
+
         ResourceConfig resourceConfig = new PackagesResourceConfig("com.ione88.myJersey.resources");
+        resourceConfig.getContainerResponseFilters().add(ResponseFilter.class);
         IoCComponentProviderFactory ioc = new GuiceComponentProviderFactory(resourceConfig, injector);
         return GrizzlyServerFactory.createHttpServer(BASE_URI, resourceConfig, ioc);
     }
 
     public static void main(String[] args) throws IOException {
-        HttpServer httpServer = startServer();
-        System.out.println("Jersey app started  \nHit enter to stop it...");
-
+            HttpServer httpServer = startServer();
+            System.out.println("Jersey app started  \nHit enter to stop it...");
         System.in.read();
         httpServer.stop();
     }

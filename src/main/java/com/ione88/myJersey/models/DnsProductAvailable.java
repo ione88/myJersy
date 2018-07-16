@@ -1,4 +1,4 @@
-package com.ione88.myJersey.model;
+package com.ione88.myJersey.models;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
